@@ -1,1 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>AyoXpert Marketing | Telegram Advertising</title>
+
+<meta name="description" content="AyoXpert Marketing provides Telegram advertising, bot promotion, channel promotion, Mini App advertising and approved Telegram advertising services.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050d18;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:92%;
+    max-width:1180px;
+    margin:auto;
+}
+
+/* NAV */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,13,24,.96);
+    border-bottom:1px solid #19334d;
+    backdrop-filter:blur(15px);
+}
+
+.nav-inner{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#29b6f6;
+}
+
+.nav-menu{
+    display:flex;
+    gap:25px;
+    color:#9fb2c5;
+    font-size:14px;
+}
+
+.nav-menu a:hover{
+    color:#29b6f6;
+}
+
+.nav-btn{
+    padding:11px 18px;
+    background:#229ed9;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.nav-btn:hover{
+    background:#35b9f5;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#229ed9;
+}
+
+.btn-primary:hover{
+    background:#35b9f5;
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    border:1px solid #31516d;
+}
+
+.btn-secondary:hover{
+    border-color:#29b6f6;
+    color:#29b6f6;
+}
+
+/* HERO */
+
+.hero{
+    padding:105px 0 90px;
+    background:
+    radial-gradient(circle at 80% 15%,#114b6d 0,transparent 34%),
+    linear-gradient(135deg,#050d18,#081827);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    padding:7px 14px;
+    border:1px solid #229ed955;
+    background:#229ed918;
+    color:#61c9f4;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.hero h1{
+    font-size:clamp(43px,6vw,72px);
+    line-height:1.03;
+    letter-spacing:-2px;
+    margin:22px 0;
+}
+
+.hero h1 span{
+    color:#29b6f6;
+}
+
+.hero-description{
+    color:#a7b8c9;
+    font-size:18px;
+    max-width:650px;
+}
+
+.hero-actions{
+    margin-top:30px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* HERO CARD */
+
+.hero-visual{
+    min-height:420px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.dashboard{
+    width:270px;
+    min-height:390px;
+    padding:10px;
+    border:7px solid #152b42;
+    border-radius:35px;
+    background:#091827;
+    box-shadow:0 30px 70px rgba(0,0,0,.6);
+    transform:rotate(3deg);
+}
+
+.dashboard-head{
+    padding:25px 18px;
+    border-radius:25px 25px 12px 12px;
+    background:linear-gradient(135deg,#229ed9,#126995);
+}
+
+.dashboard-head small{
+    opacity:.8;
+}
+
+.dashboard-head h3{
+    margin-top:5px;
+}
+
+.dashboard-item{
+    margin:14px;
+    padding:16px;
+    border-radius:12px;
+    background:#10253b;
+    border:1px solid #24415d;
+}
+
+.dashboard-item small{
+    color:#94a9bd;
+}
+
+.dashboard-item strong{
+    display:block;
+    font-size:23px;
+    margin-top:3px;
+}
+
+.float{
+    position:absolute;
+    padding:13px 16px;
+    background:#0d2237;
+    border:1px solid #284761;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    font-weight:bold;
+}
+
+.float-one{
+    top:35px;
+    left:0;
+}
+
+.float-two{
+    right:0;
+    bottom:80px;
+}
+
+.float-three{
+    left:15px;
+    bottom:15px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:85px 0;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 45px;
+}
+
+.section-heading h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#a7b8c9;
+}
+
+/* TELEGRAM ADS */
+
+.ads-section{
+    background:#081522;
+}
+
+.ads-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.ad-card{
+    display:flex;
+    flex-direction:column;
+    padding:30px;
+    border:1px solid #1a344d;
+    border-radius:20px;
+    background:linear-gradient(145deg,#0d2034,#091625);
+    transition:.3s;
+}
+
+.ad-card:hover{
+    transform:translateY(-6px);
+    border-color:#29b6f6;
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+.ad-icon{
+    width:54px;
+    height:54px;
+    display:grid;
+    place-items:center;
+    border-radius:14px;
+    background:#229ed91c;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.ad-card h3{
+    font-size:21px;
+    line-height:1.3;
+    margin-bottom:10px;
+}
+
+.ad-card p{
+    color:#a7b8c9;
+    font-size:14px;
+    flex:1;
+}
+
+.ad-price{
+    border-top:1px solid #1a344d;
+    margin-top:22px;
+    padding-top:17px;
+    margin-bottom:17px;
+}
+
+.ad-price small{
+    display:block;
+    color:#8fa4b9;
+}
+
+.ad-price strong{
+    display:block;
+    color:#35b9f5;
+    font-size:28px;
+}
+
+.order{
+    display:block;
+    text-align:center;
+    padding:12px;
+    border-radius:9px;
+    background:#229ed9;
+    font-weight:bold;
+}
+
+.order:hover{
+    background:#35b9f5;
+}
+
+/* OTHER SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:27px;
+    border:1px solid #19334d;
+    border-radius:18px;
+    background:#091625;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    border-color:#29b6f6;
+}
+
+.service-icon{
+    font-size:30px;
+    margin-bottom:13px;
+}
+
+.service h3{
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#9fb2c5;
+    font-size:14px;
+}
+
+/* HOW IT WORKS */
+
+.steps{
+    max-width:850px;
+    margin:auto;
+    border:1px solid #19334d;
+    border-radius:18px;
+    overflow:hidden;
+    background:#091625;
+}
+
+.step{
+    display:flex;
+    gap:20px;
+    padding:25px;
+    border-bottom:1px solid #19334d;
+}
+
+.step:last-child{
+    border-bottom:none;
+}
+
+.step-number{
+    min-width:44px;
+    height:44px;
+    display:grid;
+    place-items:center;
+    background:#229ed9;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.step p{
+    color:#9fb2c5;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:70px 25px;
+    border-radius:25px;
+    border:1px solid #285171;
+    background:linear-gradient(135deg,#0d304d,#091827);
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#a7b8c9;
+    margin-bottom:28px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #19334d;
+    padding:32px 0;
+    color:#8fa4b9;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.telegram-link{
+    color:#29b6f6;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ads-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        min-height:430px;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    .cta h2{
+        font-size:31px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<div class="container nav-inner">
+
+<a href="#" class="logo">
+AyoXpert <span>Marketing</span>
+</a>
+
+<div class="nav-menu">
+
+<a href="#telegram-ads">
+Telegram Ads
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#how-it-works">
+How It Works
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07"
+target="_blank"
+class="nav-btn">
+
+Telegram
+
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div>
+
+<span class="tag">
+🚀 TELEGRAM • WEB3 • DIGITAL MARKETING
+</span>
+
+
+<h1>
+Professional
+<span>Telegram Marketing</span>
+Services
+</h1>
+
+
+<p class="hero-description">
+
+Promote your Telegram bot, channel or Mini App
+with professional advertising services from
+AyoXpert Marketing.
+
+</p>
+
+
+<div class="hero-actions">
+
+<a
+href="#telegram-ads"
+class="btn btn-primary">
+
+View Telegram Ads →
+
+</a>
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27d%20like%20to%20discuss%20a%20marketing%20service."
+target="_blank"
+class="btn btn-secondary">
+
+Contact Us
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-visual">
+
+
+<div class="float float-one">
+📢 Telegram Ads
+</div>
+
+
+<div class="float float-two">
+🎯 Targeted Promotion
+</div>
+
+
+<div class="float float-three">
+🌍 Global Audience
+</div>
+
+
+
+<div class="dashboard">
+
+<div class="dashboard-head">
+
+<small>
+AYOXPERT MARKETING
+</small>
+
+<h3>
+Marketing Services
+</h3>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<small>
+Bot Advertising
+</small>
+
+<strong>
+$25+
+</strong>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<small>
+Channel Advertising
+</small>
+
+<strong>
+$50+
+</strong>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<small>
+Mini App Advertising
+</small>
+
+<strong>
+$40+
+</strong>
+
+</div>
+
+
+<div class="dashboard-item">
+
+<small>
+Approved Ads Services
+</small>
+
+<strong>
+Available
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TELEGRAM ADS -->
+
+<section
+id="telegram-ads"
+class="ads-section">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+📢 Telegram Ads Services
+</h2>
+
+<p>
+Choose the service you need. Every Order Now
+button opens Telegram with your selected service
+already included in the message.
+</p>
+
+</div>
+
+
+
+<div class="ads-grid">
+
+
+<!-- SERVICE 1 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+🤖
+</div>
+
+<h3>
+Run Ads for Bot
+</h3>
+
+<p>
+Promote your Telegram bot through an advertising
+campaign designed to increase visibility and reach
+relevant Telegram audiences.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$25
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Run%20Ads%20for%20Bot%20-%20%2425.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 2 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+📢
+</div>
+
+<h3>
+Run Ads for Channel
+</h3>
+
+<p>
+Promote your Telegram channel through advertising
+and increase its visibility among audiences relevant
+to your content, niche or community.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$50
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Run%20Ads%20for%20Channel%20-%20%2450.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 3 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+📱
+</div>
+
+<h3>
+Run Ads for Mini App
+</h3>
+
+<p>
+Promote your Telegram Mini App and introduce
+your app to audiences interested in your product,
+category or project.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$40
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Run%20Ads%20for%20Mini%20App%20-%20%2440.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 4 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+✅
+</div>
+
+<h3>
+Sell Already Approved Bot
+</h3>
+
+<p>
+Have an already approved advertising campaign
+for your Telegram bot? Contact us to discuss
+the approved campaign and next steps.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$70
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Sell%20Already%20Approved%20Bot%20-%20%2470.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 5 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+📣
+</div>
+
+<h3>
+Sell Already Approved Channel
+</h3>
+
+<p>
+Have an already approved advertising campaign
+for your Telegram channel? Contact us to discuss
+the campaign and available options.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$100
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Sell%20Already%20Approved%20Channel%20-%20%24100.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 6 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+🚀
+</div>
+
+<h3>
+Sell Already Approved Mini App
+</h3>
+
+<p>
+Have an already approved advertising campaign
+for your Telegram Mini App? Contact us to discuss
+your campaign and next steps.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$80
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Sell%20Already%20Approved%20Mini%20App%20-%20%2480.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+
+<!-- SERVICE 7 -->
+
+<div class="ad-card">
+
+<div class="ad-icon">
+⚙️
+</div>
+
+<h3>
+Sell Already Approved Automation Post Bot to Your Channel
+</h3>
+
+<p>
+Get an approved automation post bot for posting
+content to your Telegram channel. Contact us to
+discuss your channel and requirements.
+</p>
+
+<div class="ad-price">
+
+<small>
+Service price
+</small>
+
+<strong>
+$50
+</strong>
+
+</div>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Sell%20Already%20Approved%20Automation%20Post%20Bot%20to%20Your%20Channel%20-%20%2450.%20I%27d%20like%20to%20get%20more%20details."
+target="_blank"
+class="order">
+
+Order Now →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- OTHER SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+More Marketing Services
+</h2>
+
+<p>
+Need something different? Contact us and
+discuss your marketing requirements.
+</p>
+
+</div>
+
+
+
+<div class="services">
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Telegram%20Channel%20Growth."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+📈
+</div>
+
+<h3>
+Telegram Channel Growth
+</h3>
+
+<p>
+Promotional support designed to increase
+awareness of your Telegram channel.
+</p>
+
+</a>
+
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Targeted%20Promotion."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+🎯
+</div>
+
+<h3>
+Targeted Promotion
+</h3>
+
+<p>
+Reach audiences relevant to your niche,
+project or marketing campaign.
+</p>
+
+</a>
+
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Crypto%20and%20Web3%20Marketing."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+💎
+</div>
+
+<h3>
+Crypto & Web3 Marketing
+</h3>
+
+<p>
+Marketing support for Web3 communities,
+projects and digital campaigns.
+</p>
+
+</a>
+
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Community%20Promotion."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+👥
+</div>
+
+<h3>
+Community Promotion
+</h3>
+
+<p>
+Build awareness for your community,
+project or online initiative.
+</p>
+
+</a>
+
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27m%20interested%20in%20Project%20Promotion."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+🚀
+</div>
+
+<h3>
+Project Promotion
+</h3>
+
+<p>
+Give your project a professional promotional
+push and reach new audiences.
+</p>
+
+</a>
+
+
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27d%20like%20to%20discuss%20a%20custom%20marketing%20campaign."
+target="_blank"
+class="service">
+
+<div class="service-icon">
+💬
+</div>
+
+<h3>
+Custom Campaign
+</h3>
+
+<p>
+Have a different marketing requirement?
+Let's discuss your campaign directly.
+</p>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how-it-works">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+How It Works
+</h2>
+
+<p>
+Choose your service and contact us directly.
+</p>
+
+</div>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+1
+</div>
+
+<div>
+
+<h3>
+Choose Your Service
+</h3>
+
+<p>
+Select the Telegram advertising service
+you need.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+2
+</div>
+
+<div>
+
+<h3>
+Click Order Now
+</h3>
+
+<p>
+Telegram opens with your selected service
+already included in the message.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+3
+</div>
+
+<div>
+
+<h3>
+Send Your Details
+</h3>
+
+<p>
+Tell us about your bot, channel, Mini App
+or campaign requirements.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+4
+</div>
+
+<div>
+
+<h3>
+Discuss & Proceed
+</h3>
+
+<p>
+We'll discuss the campaign details and
+the next steps with you.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Ready To Promote?
+</h2>
+
+<p>
+Choose a service above or contact AyoXpert
+Marketing directly on Telegram.
+</p>
+
+<a
+href="https://t.me/AyoXpert07?text=Hello%20AyoXpert%20Marketing%2C%20I%27d%20like%20to%20discuss%20your%20Telegram%20marketing%20services."
+target="_blank"
+class="btn btn-primary">
+
+💬 Message AyoXpert Marketing
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+© 2026 AyoXpert Marketing. All rights reserved.
+</div>
+
+<a
+href="https://t.me/AyoXpert07"
+target="_blank"
+class="telegram-link">
+
+Telegram: @AyoXpert07
+
+</a>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
